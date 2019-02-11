@@ -1,0 +1,33 @@
+Package: cubeview
+Type: Package
+Title: View 3D Raster Cubes Interactively
+Version: 0.1.0
+Date: 2019-02-10
+Authors@R: 
+    c(person(given = "Tim",
+             family = "Appelhans",
+             role = c("cre", "aut"),
+             email = "tim.appelhans@gmail.com"),
+      person(given = "Stefan",
+             family = "Woellauer",
+             role = "aut",
+             email = "stephan.woellauer@geo.uni-marburg.de"))
+Maintainer: Tim Appelhans <tim.appelhans@gmail.com>
+Description: Create a 3D data cube from a RasterStack or RasterBrick. 
+    The cube can be freely rotated so that Hovmoller views of x - y, x - z and 
+    y - z are possible. Flick through each dimension using left/right (x), 
+    up/down (y) and page-up/page-down (z) buttons. 
+    Zoom, pan and rotate the cube to explore different parts of the data.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends:
+    R (>= 2.10)
+Imports:
+    base64enc,
+    htmltools,
+    htmlwidgets,
+    lattice,
+    raster,
+    viridisLite
+LazyData: true
+RoxygenNote: 6.1.0
