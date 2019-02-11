@@ -1,3 +1,3 @@
-## cubeview 0.1.0
+## slideview 0.1.0
 
 * Initial release

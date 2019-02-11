@@ -2,5 +2,5 @@
 ^\.travis\.yml$
 ^CODE_OF_CONDUCT\.md$
 ^README\.Rmd$
-^cubeview\.Rproj$
+^slideview\.Rproj$
 ^\.Rproj\.user$
