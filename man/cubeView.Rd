@@ -56,7 +56,7 @@ move mouse down/up to zoom the cube.
 \dontrun{
 library(raster)
 
-kili_data <- system.file("extdata", "kiliNDVI.tif", package = "mapview")
+kili_data <- system.file("extdata", "kiliNDVI.tif", package = "cubeview")
 kiliNDVI <- stack(kili_data)
 
 cubeView(kiliNDVI)

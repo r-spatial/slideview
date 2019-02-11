@@ -37,7 +37,7 @@
 #' \dontrun{
 #' library(raster)
 #'
-#' kili_data <- system.file("extdata", "kiliNDVI.tif", package = "mapview")
+#' kili_data <- system.file("extdata", "kiliNDVI.tif", package = "cubeview")
 #' kiliNDVI <- stack(kili_data)
 #'
 #' cubeView(kiliNDVI)
@@ -225,7 +225,7 @@ cubeViewRaw <- function(grey = NULL,
     x = object_list,
     width = width,
     height = height,
-    package = 'mapview',
+    package = 'cubeview',
     sizingPolicy = htmlwidgets::sizingPolicy(padding = 0, browser.fill = TRUE),
     dependencies = deps
   )
@@ -240,7 +240,7 @@ cubeViewRaw <- function(grey = NULL,
 #' @export
 cubeViewOutput <- function(outputId, width = '100%', height = '400px'){
   htmlwidgets::shinyWidgetOutput(outputId, 'cubeView',
-                                 width, height, package = 'mapview')
+                                 width, height, package = 'cubeview')
 }
 
 #' Widget render function for use in Shiny
