@@ -24,7 +24,7 @@ install.packages("cubeview")
 ``` r
 library(raster)
 
-kili_data <- system.file("extdata", "kiliNDVI.tif", package = "mapview")
+kili_data <- system.file("extdata", "kiliNDVI.tif", package = "cubeview")
 kiliNDVI <- stack(kili_data)
 
 cubeview(kiliNDVI)
