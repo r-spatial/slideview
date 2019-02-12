@@ -61,6 +61,6 @@ slideView(img2000, img2013, label1 = "before", label2 = "after")
 
 ### Code of Conduct
 
-Please note that the ‘leafpm’ project is released with a [Contributor
+Please note that the ‘slideview’ project is released with a [Contributor
 Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project
 you agree to abide by its terms.
