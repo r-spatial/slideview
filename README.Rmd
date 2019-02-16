@@ -25,24 +25,24 @@ images of the same region at different time stamps (change detection).
 
 ## Installation
 
-You can install the released version of slideview from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of `slideview` from [CRAN](https://CRAN.R-project.org) with:
 
-``` r
+```{r, eval=FALSE}
 install.packages("slideview")
 ```
 
 ## Example
 
-``` r
+```{r, eval=FALSE}
 ### example taken from
 ### http://www.news.com.au/technology/environment/nasa-images-reveal-
 ### aral-sea-is-shrinking-before-our-eyes/story-e6frflp0-1227074133835
-
 library(jpeg)
 library(raster)
+library(slideview)
 
+# 2000
 web_img2000 <- "http://cdn.newsapi.com.au/image/v1/68565a36c0fccb1bc43c09d96e8fb029"
-
 jpg2000 <- readJPEG(readBin(web_img2000, "raw", 1e6))
 
 # Convert imagedata to raster
@@ -52,8 +52,8 @@ rst_red2000 <- raster(jpg2000[, , 3])
 
 img2000 <- brick(rst_red2000, rst_green2000, rst_blue2000)
 
+# 2013
 web_img2013 <- "http://cdn.newsapi.com.au/image/v1/5707499d769db4b8ec76e8df61933f2a"
-
 jpg2013 <- readJPEG(readBin(web_img2013, "raw", 1e6))
 
 # Convert imagedata to raster
@@ -65,7 +65,8 @@ img2013 <- brick(rst_red2013, rst_green2013, rst_blue2013)
 
 slideView(img2000, img2013, label1 = "before", label2 = "after")
 ```
-![](man/figures/README-aral_slide.png)
+
+![](man/figures/slideview.gif)
 
 ### Code of Conduct
 
