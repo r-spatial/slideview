@@ -27,5 +27,7 @@ Imports:
     lattice,
     raster,
     viridisLite
+Suggests:
+    jpeg
 LazyData: true
 RoxygenNote: 6.1.0

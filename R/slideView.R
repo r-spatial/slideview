@@ -53,17 +53,7 @@ if ( !isGeneric('slideView') ) {
 #' Stephan Woellauer
 #'
 #' @examples
-#' \dontrun{
-#' ### raster data ###
-#' library(sp)
-#' library(raster)
-#'
-#' data(poppendorf)
-#'
-#' stck1 <- subset(poppendorf, c(3, 4, 5))
-#' stck2 <- subset(poppendorf, c(2, 3, 4))
-#' slideView(stck1, stck2)
-#'
+#' if (interactive()) {
 #' ### example taken from
 #' ### http://www.news.com.au/technology/environment/nasa-images-reveal-
 #' ### aral-sea-is-shrinking-before-our-eyes/story-e6frflp0-1227074133835
