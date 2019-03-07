@@ -1,6 +1,6 @@
 Package: slideview
 Type: Package
-Title: Compare Rasters Side by Side with a Slider
+Title: Compare Raster Images Side by Side with a Slider
 Version: 0.1.0
 Date: 2019-02-11
 Authors@R: 
@@ -14,7 +14,7 @@ Authors@R:
              email = "stephan.woellauer@geo.uni-marburg.de"))
 Maintainer: Tim Appelhans <tim.appelhans@gmail.com>
 Description: Create a side-by-side view of raster(image)s with an interactive 
-    slider to switch between regions of the images. This can be espcially useful
+    slider to switch between regions of the images. This can be especially useful
     for image comparison of the same region at different time stamps.
 License: MIT + file LICENSE
 Encoding: UTF-8

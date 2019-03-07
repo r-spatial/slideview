@@ -1,23 +1,31 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-slideview - Interactively Explore (Raster)Images side-by-side
-=============================================================
 
-[![CRAN status](https://www.r-pkg.org/badges/version/cubeview)](https://cran.r-project.org/package=slideview) [![Travis build status](https://travis-ci.org/r-spatial/cubeview.svg?branch=master)](https://travis-ci.org/r-spatial/slideview)
+# slideview - Interactively Explore (Raster)Images side-by-side
 
-`slideview` enables interactive exploration of (raster)images side-by-side by providing a mouse-controlled slider. This can be especially useful for comparing images of the same region at different time stamps (change detection).
+[![CRAN
+status](https://www.r-pkg.org/badges/version/slideview)](https://cran.r-project.org/package=slideview)
+[![Travis build
+status](https://travis-ci.org/r-spatial/slideview.svg?branch=master)](https://travis-ci.org/r-spatial/slideview)
+[![monthly](http://cranlogs.r-pkg.org/badges/slideview)](https://www.rpackages.io/package/slideview)
+[![total](http://cranlogs.r-pkg.org/badges/grand-total/slideview)](https://www.rpackages.io/package/slideview)
+[![CRAN](http://www.r-pkg.org/badges/version/slideview?color=009999)](https://cran.r-project.org/package=slideview)
 
-Installation
-------------
+`slideview` enables interactive exploration of (raster)images
+side-by-side by providing a mouse-controlled slider. This can be
+especially useful for comparing images of the same region at different
+time stamps (change detection).
 
-You can install the released version of `slideview` from [CRAN](https://CRAN.R-project.org) with:
+## Installation
+
+You can install the released version of `slideview` from
+[CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("slideview")
 ```
 
-Example
--------
+## Example
 
 ``` r
 ### example taken from
@@ -56,4 +64,6 @@ slideView(img2000, img2013, label1 = "before", label2 = "after")
 
 ### Code of Conduct
 
-Please note that the 'slideview' project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+Please note that the ‘slideview’ project is released with a [Contributor
+Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project
+you agree to abide by its terms.
