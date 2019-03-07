@@ -87,6 +87,7 @@ if ( !isGeneric('slideView') ) {
 #' }
 #'
 #' @importFrom grDevices png dev.off
+#' @importFrom viridisLite inferno
 #' @import methods raster
 #'
 #' @export
