@@ -10,6 +10,8 @@
 
 #### 🍬 miscellaneous
 
+  * using github actions (`usethis::use_github_action_check_standard()`)
+
 
 ## slideview 0.1.0
 
