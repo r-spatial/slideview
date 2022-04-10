@@ -1,4 +1,4 @@
-## slideview 0.1.0.9005 (2022-04-10)
+## slideview 0.1.0.9006 (2022-04-10)
 
 #### ✨ features and improvements
 
