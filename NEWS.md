@@ -4,6 +4,8 @@
 
 #### 🐛 bug fixes
 
+  * missing css and legacy package referrals (to mapview) corrected. #2
+
 #### 💬 documentation etc
 
 #### 🍬 miscellaneous
