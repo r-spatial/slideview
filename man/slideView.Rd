@@ -12,34 +12,66 @@
 \alias{slideview}
 \title{slideView}
 \usage{
-\S4method{slideView}{RasterStackBrick,RasterStackBrick}(img1, img2,
-  label1 = deparse(substitute(img1, env = parent.frame())),
-  label2 = deparse(substitute(img2, env = parent.frame())), r = 3,
-  g = 2, b = 1, na.color = "#BEBEBE", maxpixels = 1e+07, ...)
-
-\S4method{slideView}{RasterLayer,RasterLayer}(img1, img2,
+\S4method{slideView}{RasterStackBrick,RasterStackBrick}(
+  img1,
+  img2,
   label1 = deparse(substitute(img1, env = parent.frame())),
   label2 = deparse(substitute(img2, env = parent.frame())),
-  legend = TRUE, col.regions = viridisLite::inferno(256),
-  na.color = "#BEBEBE", maxpixels = 1e+07)
+  r = 3,
+  g = 2,
+  b = 1,
+  na.color = "#BEBEBE",
+  maxpixels = 1e+07,
+  ...
+)
 
-\S4method{slideView}{RasterStackBrick,RasterLayer}(img1, img2,
+\S4method{slideView}{RasterLayer,RasterLayer}(
+  img1,
+  img2,
   label1 = deparse(substitute(img1, env = parent.frame())),
   label2 = deparse(substitute(img2, env = parent.frame())),
-  legend = TRUE, r = 3, g = 2, b = 1,
-  col.regions = viridisLite::inferno(256), na.color = "#BEBEBE",
-  maxpixels = 1e+07, ...)
+  legend = TRUE,
+  col.regions = viridisLite::inferno(256),
+  na.color = "#BEBEBE",
+  maxpixels = 1e+07
+)
 
-\S4method{slideView}{RasterLayer,RasterStackBrick}(img1, img2,
+\S4method{slideView}{RasterStackBrick,RasterLayer}(
+  img1,
+  img2,
   label1 = deparse(substitute(img1, env = parent.frame())),
   label2 = deparse(substitute(img2, env = parent.frame())),
-  legend = TRUE, r = 3, g = 2, b = 1,
-  col.regions = viridisLite::inferno(256), na.color = "#BEBEBE",
-  maxpixels = 1e+07, ...)
+  legend = TRUE,
+  r = 3,
+  g = 2,
+  b = 1,
+  col.regions = viridisLite::inferno(256),
+  na.color = "#BEBEBE",
+  maxpixels = 1e+07,
+  ...
+)
 
-\S4method{slideView}{character,character}(img1, img2,
+\S4method{slideView}{RasterLayer,RasterStackBrick}(
+  img1,
+  img2,
   label1 = deparse(substitute(img1, env = parent.frame())),
-  label2 = deparse(substitute(img2, env = parent.frame())))
+  label2 = deparse(substitute(img2, env = parent.frame())),
+  legend = TRUE,
+  r = 3,
+  g = 2,
+  b = 1,
+  col.regions = viridisLite::inferno(256),
+  na.color = "#BEBEBE",
+  maxpixels = 1e+07,
+  ...
+)
+
+\S4method{slideView}{character,character}(
+  img1,
+  img2,
+  label1 = deparse(substitute(img1, env = parent.frame())),
+  label2 = deparse(substitute(img2, env = parent.frame()))
+)
 
 \S4method{slideview}{ANY}(...)
 }
