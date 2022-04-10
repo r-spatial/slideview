@@ -31,3 +31,4 @@ Suggests:
     jpeg
 LazyData: true
 RoxygenNote: 7.1.2
+URL: https://r-spatial.github.io/slideview/
