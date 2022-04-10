@@ -3,12 +3,14 @@
 
 # Interactively Explore (Raster)Images side-by-side
 
-[![Travis build
-status](https://travis-ci.org/r-spatial/slideview.svg?branch=master)](https://travis-ci.org/r-spatial/slideview)
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/r-spatial/slideview/workflows/R-CMD-check/badge.svg)](https://github.com/r-spatial/slideview/actions)
 ![monthly](http://cranlogs.r-pkg.org/badges/slideview)
 ![total](http://cranlogs.r-pkg.org/badges/grand-total/slideview)
 [![CRAN](http://www.r-pkg.org/badges/version/slideview?color=009999)](https://cran.r-project.org/package=slideview)
 [![status](https://tinyverse.netlify.com/badge/slideview)](https://CRAN.R-project.org/package=slideview)
+<!-- badges: end -->
 
 `slideview` enables interactive exploration of (raster)images
 side-by-side by providing a mouse-controlled slider. This can be
