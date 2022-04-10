@@ -4,3 +4,4 @@
 ^README\.Rmd$
 ^slideview\.Rproj$
 ^\.Rproj\.user$
+^\.github$
