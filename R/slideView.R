@@ -466,7 +466,7 @@ slideViewInternal <- function(message,
     x,
     width = width,
     height = height,
-    package = 'mapview',
+    package = 'slideview',
     dependencies = deps,
     sizingPolicy = sizing
   )
@@ -476,7 +476,7 @@ slideViewInternal <- function(message,
 
 slideViewOutput <- function(outputId, width = '100%', height = '400px'){
   htmlwidgets::shinyWidgetOutput(outputId, 'slideView',
-                                 width, height, package = 'mapview')
+                                 width, height, package = 'slideview')
 }
 
 
