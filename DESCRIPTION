@@ -28,4 +28,5 @@ Imports:
 Suggests:
     jpeg
 RoxygenNote: 7.1.2
-URL: https://r-spatial.github.io/slideview/
+URL: https://r-spatial.github.io/slideview/, https://github.com/r-spatial/slideview
+BugReports: https://github.com/r-spatial/slideview/issues
