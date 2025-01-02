@@ -7,10 +7,13 @@ raster2PNG <- function(x,
                        na.color,
                        maxpixels) {
 
-  x <- rasterCheckSize(x, maxpixels = maxpixels)
-
-  mat <- t(raster::as.matrix(x))
-
+  is_spatraster <- inherits(x, "SpatRaster")
+  x <- rasterCheckSize(x, maxpixels = maxpixels, is_spatraster)
+  if (is_spatraster) {
+	mat <- t(terra::as.matrix(x, wide=TRUE))
+  } else {
+	mat <- t(raster::as.matrix(x))
+  }
   if (missing(at)) at <- lattice::do.breaks(range(mat, na.rm = TRUE), 256)
 
   cols <- lattice::level.colors(mat,
@@ -34,14 +37,12 @@ rgbStack2PNG <- function(x, r, g, b,
                          maxpixels,
                          ...) {
 
-  x <- rasterCheckSize(x, maxpixels = maxpixels)
+  is_spatraster <- inherits(x, "SpatRaster")
+  x <- rasterCheckSize(x, maxpixels = maxpixels, is_spatraster)
 
-  x3 <- raster::subset(x, c(r, g, b))
-
-  mat <- cbind(x[[r]][],
-               x[[g]][],
-               x[[b]][])
-
+  x <- x[[c(r, g, b)]]
+  mat <- values(x)
+ 
   for(i in seq(ncol(mat))){
     z <- mat[, i]
     lwr <- stats::quantile(z, quantiles[1], na.rm = TRUE)
@@ -63,13 +64,17 @@ rgbStack2PNG <- function(x, r, g, b,
 }
 
 
-rasterCheckSize <- function(x, maxpixels) {
+rasterCheckSize <- function(x, maxpixels, is_spatraster) {
   if (maxpixels < raster::ncell(x)) {
     warning(paste("maximum number of pixels for Raster* viewing is",
                   maxpixels, "; \nthe supplied Raster* has", raster::ncell(x), "\n",
                   "... decreasing Raster* resolution to", maxpixels, "pixels\n",
                   "to view full resolution set 'maxpixels = ", raster::ncell(x), "'"))
-    x <- raster::sampleRegular(x, maxpixels, asRaster = TRUE, useGDAL = TRUE)
+    if (is_spatraster) {
+		x <- terra::spatSample(x, maxpixels, "regular", as.raster = TRUE)	
+	} else {
+		x <- raster::sampleRegular(x, maxpixels, asRaster = TRUE, useGDAL = TRUE)
+	}
   }
   return(x)
 }

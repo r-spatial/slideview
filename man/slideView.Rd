@@ -3,6 +3,7 @@
 \docType{methods}
 \name{slideView}
 \alias{slideView}
+\alias{slideView,SpatRaster,SpatRaster-method}
 \alias{slideView,RasterStackBrick,RasterStackBrick-method}
 \alias{slideView,RasterLayer,RasterLayer-method}
 \alias{slideView,RasterStackBrick,RasterLayer-method}
@@ -12,6 +13,22 @@
 \alias{slideview}
 \title{slideView}
 \usage{
+\S4method{slideView}{SpatRaster,SpatRaster}(
+  img1,
+  img2,
+  label1 = deparse(substitute(img1, env = parent.frame())),
+  label2 = deparse(substitute(img2, env = parent.frame())),
+  r = 3,
+  g = 2,
+  b = 1,
+  col.regions = viridisLite::inferno(256),
+  legend = TRUE,
+  na.color = "#BEBEBE",
+  maxpixels = 1e+07,
+  ...
+)
+
+
 \S4method{slideView}{RasterStackBrick,RasterStackBrick}(
   img1,
   img2,

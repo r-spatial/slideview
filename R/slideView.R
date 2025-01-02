@@ -96,6 +96,66 @@ if ( !isGeneric('slideView') ) {
 #' @rdname slideView
 #' @aliases slideView,RasterStackBrick,RasterStackBrick-method
 
+
+setMethod("slideView", signature(img1 = "SpatRaster",
+                                 img2 = "SpatRaster"),
+          function(img1,
+                   img2,
+                   label1 = deparse(substitute(img1, env = parent.frame())),
+                   label2 = deparse(substitute(img2, env = parent.frame())),
+                   r = 3,
+                   g = 2,
+                   b = 1,
+                   col.regions = viridisLite::inferno(256),	   
+                   legend = TRUE,
+                   na.color = "#BEBEBE",
+                   maxpixels = 1e7,
+                   ...) {
+
+			if (nlyr(img1) > 1) {
+				png1 <- rgbStack2PNG(img1, r = r, g = g, b = b,
+                                 na.color = na.color,
+                                 maxpixels = maxpixels,
+                                 ...)
+			} else {
+				png1 <- raster2PNG(img1, col.regions = col.regions,
+                               na.color = na.color,
+                               maxpixels = maxpixels)
+			
+			}
+			if (nlyr(img2) > 1) {
+				png2 <- rgbStack2PNG(img2, r = r, g = g, b = b,
+                                 na.color = na.color,
+                                 maxpixels = maxpixels,
+                                 ...)
+			} else {
+				png2 <- raster2PNG(img2, col.regions = col.regions,
+                               na.color = na.color,
+                               maxpixels = maxpixels)
+			}
+
+            ## temp dir
+            dir <- tempfile()
+            dir.create(dir)
+            # r1 <- trunc(runif(1, 1000000000, 9999999999))
+            # r2 <- trunc(runif(1, 1000000000, 9999999999))
+            fl1 <- paste0(dir, "/", label1, ".png")
+            fl2 <- paste0(dir, "/", label2, ".png")
+
+            ## pngs
+            png::writePNG(png1, fl1)
+            png::writePNG(png2, fl2)
+
+            slideViewInternal(list(a="a", b="b"),
+                              img1nm = label1,
+                              img2nm = label2,
+                              filename1 = fl1,
+                              filename2 = fl2)
+          }
+
+)
+
+
 setMethod("slideView", signature(img1 = "RasterStackBrick",
                                  img2 = "RasterStackBrick"),
           function(img1,
