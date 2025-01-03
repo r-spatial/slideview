@@ -24,6 +24,7 @@ Imports:
     htmlwidgets,
     lattice,
     raster,
+	terra,
     viridisLite
 Suggests:
     jpeg
