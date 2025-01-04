@@ -46,9 +46,27 @@ HTMLWidgets.widget({
     var legendr_filename = x.legend && document.getElementById(fldrnm.concat("-imager-attachment")) !== null ? document.getElementById(fldrnm.concat("-imager-attachment")).href : undefined;
     var legendl_filename = x.legend && document.getElementById(fldrnm.concat("-imager-attachment")) !== null ? document.getElementById(fldrnm.concat("-imagel-attachment")).href : undefined;
 
+
+    divDraw = document.createElement("div");
+    divDraw.id ="divDraw";
+    divDraw.style.cursor = "col-resize";
+    rootNode.appendChild(divDraw);
+
+    canvasAfter = document.createElement("canvas");
+    canvasAfter.id = "canvasAfter";
+    divDraw.appendChild(canvasAfter);
+
+    divBefore = document.createElement("div");
+    divBefore.id ="divBefore";
+    divDraw.appendChild(divBefore);
+
+    canvasBefore = document.createElement("canvas");
+    canvasBefore.id = "canvasBefore";
+    divBefore.appendChild(canvasBefore);
+
     divInfoSlide = document.createElement("div");
     divInfoSlide.id ="divInfoSlide";
-    el.appendChild(divInfoSlide);
+    divDraw.appendChild(divInfoSlide);
 
     spanLeft = document.createElement("span");
     spanLeft.id ="spanLeft";
@@ -72,7 +90,7 @@ HTMLWidgets.widget({
     if(legendr_filename !== undefined) {
       var divLegendr = document.createElement("div");
       divLegendr.id ="divLegendr";
-      el.appendChild(divLegendr);
+      divDraw.appendChild(divLegendr);
     	var legendr_image = new Image();
     	legendr_image.src = legendr_filename;
     	divLegendr.appendChild(legendr_image);
@@ -81,28 +99,11 @@ HTMLWidgets.widget({
 	  if(legendl_filename !== undefined) {
       var divLegendl = document.createElement("div");
       divLegendl.id ="divLegendl";
-      el.appendChild(divLegendl);
+      divDraw.appendChild(divLegendl);
     	var legendl_image = new Image();
     	legendl_image.src = legendl_filename;
     	divLegendl.appendChild(legendl_image);
 	  }
-
-    divDraw = document.createElement("div");
-    divDraw.id ="divDraw";
-    divDraw.style.cursor = "col-resize";
-    el.appendChild(divDraw);
-
-    canvasAfter = document.createElement("canvas");
-    canvasAfter.id = "canvasAfter";
-    divDraw.appendChild(canvasAfter);
-
-    divBefore = document.createElement("div");
-    divBefore.id ="divBefore";
-    divDraw.appendChild(divBefore);
-
-    canvasBefore = document.createElement("canvas");
-    canvasBefore.id = "canvasBefore";
-    divBefore.appendChild(canvasBefore);
 
     init(filename1, filename2);
   },
@@ -231,11 +232,13 @@ function keydown(e) {
 }
 
 function mousewheel(e) {  // RStudio
+  e.preventDefault();
   e.deltaY = -e.wheelDelta;
   wheel(e);
 }
 
 function wheel(e) {
+  e.preventDefault();
 	var x = e.layerX;
 	var y = e.layerY;
 	var offX = x/scale;
@@ -275,8 +278,8 @@ function draw() {
 
 function drawLayer(canvas,image) {
   if(canvas.width != window.innerWidth || canvas.height != window.innerHeight) {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = rootNode.clientWidth;
+    canvas.height = rootNode.clientHeight;
   }
 	var ctx = canvas.getContext("2d");
 	ctx.mozImageSmoothingEnabled = !crisp;
