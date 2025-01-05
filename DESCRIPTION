@@ -24,10 +24,10 @@ Imports:
     htmlwidgets,
     lattice,
     raster,
-	terra,
+	  terra,
     viridisLite
 Suggests:
     jpeg
-RoxygenNote: 7.1.2
+RoxygenNote: 7.3.2
 URL: https://r-spatial.github.io/slideview/, https://github.com/r-spatial/slideview
 BugReports: https://github.com/r-spatial/slideview/issues
