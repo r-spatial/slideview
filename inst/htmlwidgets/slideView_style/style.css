@@ -9,15 +9,16 @@
   width: 100%;
   left: 0;
   top: 0;
-  opacity: 0.7;
-  z-index: 1;
+  right: 0;
+  opacity: 1;
+  z-index: 100;
   font-size: small;
 }
 
 .slide {
   background-color: #787878;
 }
-
+/*
 #divInfo {
   position: absolute;
   background-color: #787878;
@@ -40,7 +41,7 @@
   z-index: 1;
   font-size: small;
 }
-
+*/
 #divLegend {
   position: absolute;
   pointer-events: none; /*pass mouse events to parent*/

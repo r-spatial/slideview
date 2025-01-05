@@ -68,15 +68,25 @@ HTMLWidgets.widget({
     divInfoSlide.id ="divInfoSlide";
     divDraw.appendChild(divInfoSlide);
 
+    let infoCSS = {
+      "background-color": "#ff00ff",
+      "color": "#00ffff",
+      "opacity": 0.7,
+      "font-size": "20px"
+    };
+
     spanLeft = document.createElement("span");
     spanLeft.id ="spanLeft";
     spanLeft.className = "slide";
+    Object.assign(spanLeft.style, infoCSS);
     spanMid = document.createElement("span");
     spanMid.id ="spanMid";
     spanMid.className ="slide";
+    Object.assign(spanMid.style, infoCSS);
     spanRight = document.createElement("span");
     spanRight.id ="spanRight";
     spanRight.className = "slide";
+    Object.assign(spanRight.style, infoCSS);
 
     divInfoSlide.appendChild(spanLeft);
     divInfoSlide.appendChild(spanMid);
@@ -143,7 +153,7 @@ function mousemove(e) {
 	  divDraw.style.cursor = "col-resize";
 	}
 	/*rect (top right bottom left)*/
-	divBefore.style.clip = "rect(0px "+e.layerX+"px auto 0px)";
+	divBefore.style.clipPath = "rect(0px "+e.layerX+"px auto 0px)";
 
 	var w = spanLeft.offsetWidth + spanMid.offsetWidth + spanRight.offsetWidth;
 	var m = spanLeft.offsetWidth + (spanMid.offsetWidth/2);
