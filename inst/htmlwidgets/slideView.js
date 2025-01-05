@@ -68,15 +68,7 @@ HTMLWidgets.widget({
     divInfoSlide.id ="divInfoSlide";
     divDraw.appendChild(divInfoSlide);
 
-    /*
-    let infoCSS = {
-      "background-color": "#ff00ff",
-      "color": "#00ffff",
-      "opacity": 0.7,
-      "font-size": "20px"
-    };
-    */
-    let infoCSS = {};
+    let infoCSS = x.sliderInfoCSS;
 
     spanLeft = document.createElement("span");
     spanLeft.id ="spanLeft";
