@@ -5,7 +5,8 @@
 \alias{slideView}
 \alias{slideView,RasterStackBrick,RasterStackBrick-method}
 \alias{slideView,Raster,Raster-method}
-\alias{slideView,RasterLayer,RasterStackBrick-method}
+\alias{slideView,Raster,RasterStackBrick-method}
+\alias{slideView,RasterStackBrick,Raster-method}
 \alias{slideView,character,character-method}
 \alias{slideview,ANY-method}
 \alias{slideview}
@@ -43,18 +44,19 @@
   ...
 )
 
-\S4method{slideView}{RasterLayer,RasterStackBrick}(
+\S4method{slideView}{Raster,RasterStackBrick}(
   img1,
   img2,
   label1 = deparse(substitute(img1, env = parent.frame())),
   label2 = deparse(substitute(img2, env = parent.frame())),
-  legend = TRUE,
-  r = 3,
-  g = 2,
-  b = 1,
-  col.regions = viridisLite::inferno(256),
-  na.color = "#BEBEBE",
-  maxpixels = 1e+07,
+  ...
+)
+
+\S4method{slideView}{RasterStackBrick,Raster}(
+  img1,
+  img2,
+  label1 = deparse(substitute(img1, env = parent.frame())),
+  label2 = deparse(substitute(img2, env = parent.frame())),
   ...
 )
 
@@ -62,7 +64,8 @@
   img1,
   img2,
   label1 = deparse(substitute(img1, env = parent.frame())),
-  label2 = deparse(substitute(img2, env = parent.frame()))
+  label2 = deparse(substitute(img2, env = parent.frame())),
+  sliderInfoCSS = list()
 )
 
 \S4method{slideview}{ANY}(...)
@@ -130,9 +133,11 @@ For slideView a few keyboard shortcuts are defined:
 \itemize{
 \item \code{slideView(img1 = Raster, img2 = Raster)}: for RasterLayers
 
-\item \code{slideView(img1 = RasterStackBrick, img2 = RasterStackBrick)}: for RasterStackBrick, RasterLayer
+\item \code{slideView(img1 = RasterStackBrick, img2 = RasterStackBrick)}: for RasterStackBrick, RasterStackBrick
 
-\item \code{slideView(img1 = RasterLayer, img2 = RasterStackBrick)}: for RasterLayer, RasterStackBrick
+\item \code{slideView(img1 = Raster, img2 = RasterStackBrick)}: for RasterLayer, RasterStackBrick
+
+\item \code{slideView(img1 = RasterStackBrick, img2 = Raster)}: for RasterStackBrick, RasterLayer
 
 \item \code{slideView(img1 = character, img2 = character)}: for png files
 

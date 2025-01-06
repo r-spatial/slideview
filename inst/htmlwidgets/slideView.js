@@ -43,8 +43,8 @@ HTMLWidgets.widget({
     var filename1 = document.getElementById(fldrnm.concat("-imager-attachment")).href;
     var filename2 = document.getElementById(fldrnm.concat("-imagel-attachment")).href;
 
-    var legendr_filename = x.legend && document.getElementById(fldrnm.concat("-imager-attachment")) !== null ? document.getElementById(fldrnm.concat("-imager-attachment")).href : undefined;
-    var legendl_filename = x.legend && document.getElementById(fldrnm.concat("-imager-attachment")) !== null ? document.getElementById(fldrnm.concat("-imagel-attachment")).href : undefined;
+    var legendr_filename = x.legend && document.getElementById(fldrnm.concat("-legendr-attachment")) !== null ? document.getElementById(fldrnm.concat("-legendr-attachment")).href : undefined;
+    var legendl_filename = x.legend && document.getElementById(fldrnm.concat("-legendl-attachment")) !== null ? document.getElementById(fldrnm.concat("-legendl-attachment")).href : undefined;
 
 
     divDraw = document.createElement("div");
