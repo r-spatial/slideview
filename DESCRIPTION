@@ -1,6 +1,6 @@
 Package: slideview
 Title: Compare Raster Images Side by Side with a Slider
-Version: 0.2.0.9003
+Version: 0.2.0.9004
 Authors@R: 
     c(person(given = "Tim",
              family = "Appelhans",
