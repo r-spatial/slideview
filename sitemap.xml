@@ -1,27 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://r-spatial.github.io/slideview/404.html</loc>
-  </url>
-  <url>
-    <loc>https://r-spatial.github.io/slideview/CODE_OF_CONDUCT.html</loc>
-  </url>
-  <url>
-    <loc>https://r-spatial.github.io/slideview/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://r-spatial.github.io/slideview/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://r-spatial.github.io/slideview/index.html</loc>
-  </url>
-  <url>
-    <loc>https://r-spatial.github.io/slideview/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://r-spatial.github.io/slideview/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://r-spatial.github.io/slideview/reference/slideView.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://r-spatial.github.io/slideview/404.html</loc></url>
+<url><loc>https://r-spatial.github.io/slideview/CODE_OF_CONDUCT.html</loc></url>
+<url><loc>https://r-spatial.github.io/slideview/LICENSE-text.html</loc></url>
+<url><loc>https://r-spatial.github.io/slideview/authors.html</loc></url>
+<url><loc>https://r-spatial.github.io/slideview/index.html</loc></url>
+<url><loc>https://r-spatial.github.io/slideview/news/index.html</loc></url>
+<url><loc>https://r-spatial.github.io/slideview/reference/index.html</loc></url>
+<url><loc>https://r-spatial.github.io/slideview/reference/slideView.html</loc></url>
 </urlset>
+
