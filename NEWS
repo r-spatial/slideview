@@ -1,6 +1,9 @@
-slideview 0.2.0.9004 (2025-01-07)
+slideview 0.2.0.9005 (2025-08-06)
 
 features and improvements
+
+  * support for SpatRasters
+  * option sliderInfoCSS to set appearance of info slider
 
 bug fixes
 
