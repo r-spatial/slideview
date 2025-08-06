@@ -2,6 +2,9 @@
 
 #### ✨ features and improvements
 
+  * support for SpatRasters
+  * option sliderInfoCSS to set appearance of info slider
+
 #### 🐛 bug fixes
 
 #### 💬 documentation etc

@@ -38,7 +38,7 @@ if ( !isGeneric('slideView') ) {
 #' RatserStacks/*Bricks).
 #' @param sliderInfoCSS list of valid css key-value pairs for the slider info at
 #' the top of the window.
-#' @param ... additional arguments passed on to repective functions.
+#' @param ... additional arguments passed on to respective functions.
 #'
 #' @details
 #' For slideView a few keyboard shortcuts are defined:
@@ -75,7 +75,7 @@ if ( !isGeneric('slideView') ) {
 #'
 #' img2013 <- rast(jpg2013)
 #'
-#' slideView(img2000, img2013, label1 = "before", label2 = "after")
+#' slideView(img2000, img2013, label1 = "before", label2 = "after", legend = FALSE)
 #'
 #' ## adjust layout of the info slider
 #' slideView(
@@ -88,6 +88,7 @@ if ( !isGeneric('slideView') ) {
 #'     , "font-size" = "30px"
 #'     , "font-family" = "courier"
 #'   )
+#'   , legend = FALSE
 #' )
 #'
 #' }
@@ -102,6 +103,8 @@ if ( !isGeneric('slideView') ) {
 #' @name slideView
 #' @rdname slideView
 #' @aliases slideView,RasterStackBrick,RasterStackBrick-method
+#' @aliases slideView,SpatRaster,SpatRaster-method
+
 
 ## SpatRaster ==================================================================
 setMethod("slideView", signature(img1 = "SpatRaster",

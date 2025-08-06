@@ -4,6 +4,7 @@
 \name{slideView}
 \alias{slideView}
 \alias{slideView,RasterStackBrick,RasterStackBrick-method}
+\alias{slideView,SpatRaster,SpatRaster-method}
 \alias{slideView,Raster,Raster-method}
 \alias{slideView,Raster,RasterStackBrick-method}
 \alias{slideView,RasterStackBrick,Raster-method}
@@ -98,7 +99,7 @@ If maxpixels < \code{ncell(x)}, sampleRegular is used before plotting.}
 \item{sliderInfoCSS}{list of valid css key-value pairs for the slider info at
 the top of the window.}
 
-\item{...}{additional arguments passed on to repective functions.}
+\item{...}{additional arguments passed on to respective functions.}
 
 \item{color}{the color palette to be used for visualising RasterLayers}
 }
@@ -165,7 +166,7 @@ jpg2013 <- readJPEG(readBin(web_img2013, "raw", 1e6))
 
 img2013 <- rast(jpg2013)
 
-slideView(img2000, img2013, label1 = "before", label2 = "after")
+slideView(img2000, img2013, label1 = "before", label2 = "after", legend = FALSE)
 
 ## adjust layout of the info slider
 slideView(
@@ -178,6 +179,7 @@ slideView(
     , "font-size" = "30px"
     , "font-family" = "courier"
   )
+  , legend = FALSE
 )
 
 }
